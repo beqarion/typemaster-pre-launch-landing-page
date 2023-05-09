@@ -1,0 +1,276 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@500;700;900&display=swap");
+/*
+===============
+Variables
+===============
+*/
+
+:root {
+  /* colors */
+  --orange: rgb(241, 103, 24);
+  --light-orange: rgb(255, 155, 98);
+  --dark-blue: rgb(22, 37, 66);
+  --light-blue-gray: rgb(123, 139, 173);
+
+  --clr-white: #fff;
+  --clr-grey: rgb(232, 239, 242);
+  --clr-black: #222;
+  --ff: "Barlow", sans-serif;
+  --transition: all 0.3s linear;
+  --max-width: 1110px;
+  --fixed-width: 620px;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff);
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  color: var(--dark-blue);
+}
+p {
+  color: var(--light-blue-gray);
+}
+/*  global classes */
+
+/* section */
+.section {
+  padding: 5rem 0;
+}
+
+.section-center {
+  width: 87.2vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+@media screen and (min-width: 768px) {
+  .section-center {
+    width: 89.6vw;
+  }
+}
+
+/* btn */
+.btn {
+  padding: 11px 14px;
+  color: var(--dark-blue);
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  transition: var(--transition);
+}
+@media screen and (min-width: 768px) {
+  .btn {
+    padding: 16px 26.5px;
+  }
+}
+.cta-btn-1 {
+  background: var(--clr-grey);
+}
+.cta-btn-2 {
+  background: var(--orange);
+  color: var(--clr-white);
+}
+
+@media screen and (min-width: 768px) {
+  .cta-btn-1:hover {
+    background: var(--dark-blue);
+    color: var(--clr-white);
+  }
+  .cta-btn-2:hover {
+    background: var(--light-orange);
+  }
+}
+
+/* img */
+img:not(.logo) {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/*
+=============== 
+Header
+===============
+*/
+.header {
+  padding: 24px 0;
+}
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/*
+=============== 
+Hero Section
+===============
+*/
+.hero-section {
+  padding: 40px 0 0;
+  overflow: hidden;
+}
+/* banner */
+.banner {
+  margin-bottom: 64px;
+}
+.banner-title {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 48px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.banner-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--light-blue-gray);
+  margin-bottom: 32px;
+}
+.cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cta-info {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: var(--light-blue-gray);
+}
+.hero-img-container {
+  width: 100vw;
+}
+.hero-img {
+  border-radius: 14px;
+}
+
+/*
+=============== 
+Products
+===============
+*/
+.products-section {
+  overflow: hidden;
+  padding: 24px 0 0;
+}
+.images-container {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 24px;
+  margin-bottom: 75px;
+}
+.images-container > *,
+.images-container img {
+  border-radius: 14px;
+  height: 193px;
+}
+.images-container *:first-child {
+  position: relative;
+  flex: 1 0 129px;
+  order: 1;
+}
+.overlay-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.images-container img:last-child {
+  flex: 1 0 220px;
+}
+
+/* product info */
+.product-title {
+  width: 255px;
+  margin: 0 auto;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.product-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+}
+
+/*
+=============== 
+Features
+===============
+*/
+.features-section {
+  padding: 111px 0 0;
+}
+/* feature */
+.features {
+  display: grid;
+  row-gap: 64px;
+}
+.feature img {
+  margin: 0 auto;
+  object-fit: none;
+  border-radius: 16px;
+  height: 65px;
+  width: 65px;
+  background: var(--orange);
+  margin-bottom: 48px;
+}
+.feature-title {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.feature-text {
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+}
+
+/*
+=============== 
+Footer
+===============
+*/
+.footer {
+  padding: 96px 0 50px;
+  text-align: center;
+}
